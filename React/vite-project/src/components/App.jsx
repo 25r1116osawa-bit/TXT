@@ -1,22 +1,15 @@
-import './App.css'
-import ColorfulMessage from './App.css'
-
-
-
 const App = () => {
 
-
-const ContentStyleB = {
+  const ContentStyleB = {
     color: "red",
-    fontsiza: "18px"
+    fontSize: "18px" // ⭕
   }
 
   return (
     <>
-      <ColorfulMessage color="blue" message="こんにちわ" />
-
-      <p style={ContentStyleB}>元気です。</p>
-      
+      <header> 
+        aiueo
+      </header>
     </>
   )
 }
