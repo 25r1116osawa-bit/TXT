@@ -1,35 +1,58 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+function Todo() {
+  // todo は増えたり減ったりするので、ステートで管理する
+  const [inCompletTodos, setinCompletTodos] = useState(["todoです1", "todoです2"])
+
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className='inputArea'>
+        <input className='inputTodo' placeholder='todoを入力' />
+        <button>追加</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className='incompleteTodos'>
+        <p className='title'>未完了のTODO</p>
+        <ul>
+          {inCompletTodos.map((todo) => {
+            return (
+              <li key={todo}>
+                <div className='TodoList'>
+                  <p className='todoItem'>{todo}</p>
+                  <button>完了</button>
+                  <button>削除</button>
+                </div>
+              </li>)
+
+          })}
+
+
+        </ul>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='completeTodos'>
+        <p className='title'>todoでした</p>
+        <ul>
+          <li>
+            <div className='TodoList'>
+              <p className='todoItem'>todo</p>
+              <button>戻す</button>
+            </div>
+          </li>
+          <li>
+            <div className='TodoList'>
+              <p className='todoItem'>todo</p>
+              <button>戻す</button>
+            </div>
+          </li>
+        </ul>
+
+      </div>
     </>
   )
 }
 
-export default App
+export default Todo
