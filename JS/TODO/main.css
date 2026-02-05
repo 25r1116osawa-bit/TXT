@@ -1,0 +1,61 @@
+
+body{
+    margin: 0%;
+    padding: 0%;
+    width: 400px;
+    color: #777;
+}
+
+button {
+  border-radius: 6px;
+  border: 1px solid #777;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+button:hover {
+  background-color: #eee;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: inset 0 2px 2px rgba(0,0,0,0.2);
+}
+
+
+
+
+p{  
+    margin-top: 0px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.inputArea{
+    background-color:rgb(192, 218, 218);
+    height: 40px;
+    border-radius: 8px;
+}
+
+.inputTodo{
+    margin: 8px;
+    
+}
+
+.incompleteTodos{
+min-height: 200px;
+border-radius: 8px;
+margin-top:8px ;
+border: 1px solid #309da5;
+}
+
+
+.completeTodos{
+    margin-top: 8px;
+background-color: rgb(192, 218, 218);
+min-height: 200px;
+border-radius: 8px;
+border: 1px solid #309da5;
+}
