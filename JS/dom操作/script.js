@@ -64,14 +64,19 @@ element.style.display = "none"
 // クリック・イベント処理（激頻出）
 button.addEventListener("click", () => {})
 
-// React
+// React 
+// 引数がない場合
 // <button onClick={handleClick}>押す</button>
+
+// 引数がある場合 アロー関数でかかなければ即時実行される。　handleclick(index)
+// <button onClick={() => deleteItem(index)}>削除</button>
 
 // フォームの値を取得する（重要）
 input.value
 
 // React
-// <input value={text} onChange={e => setText(e.target.value)} />
+// <input className='inputTodo' placeholder='todoを入力' value={inputText} onChange={onChangeInput}  />
+// const onChange = (e) => {setText(e.target.value)}
 
 // ⑦ 要素を追加・削除する
 parent.appendChild(child)
