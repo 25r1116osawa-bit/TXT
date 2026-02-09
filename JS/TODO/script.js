@@ -1,11 +1,7 @@
 const inputTodo = document.getElementById('inputTodo');
 const inputButton = document.getElementById('inputButton');
-
 const completeTodos = document.getElementById('completeTodos');
 const incompleteTodos = document.getElementById('incompleteTodos');
-
-// console.log() // 入力した文字取得
-
 
 const onClick = () => {
     const li = document.createElement('li');

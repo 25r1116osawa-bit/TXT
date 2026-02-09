@@ -88,6 +88,7 @@ const arr7 = [...arr4,...arr5]; //結果 [10,20,30,40]
 const nameArr = ["田中", "山田", "樹"];
 
 // ポイントとしては、Map関数の中に関数を書くこと
+map(()=>{})
 
 nameArr.map((name) => {
   console.log(name);
