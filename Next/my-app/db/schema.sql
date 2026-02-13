@@ -1,0 +1,11 @@
+-- Active: 1769656450734@@127.0.0.1@3306@test
+-- データベース作成
+CREATE DATABASE IF NOT EXISTS list_app;
+USE list_app;
+
+-- users テーブル
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
