@@ -1,6 +1,7 @@
 // app/api/db-test/route.ts
+// 「HTTP リクエストを受けて、レスポンスを返す処理を書くファイル」
 
-// app/api/db-test/route.ts
+
 import { NextResponse } from 'next/server'
 import mariadb from 'mariadb'
 
@@ -10,6 +11,12 @@ const pool = mariadb.createPool({
   password: 'root123',
   database: 'list_app',
 })
+
+//export async function GET() {
+  // DB にアクセス
+  // 処理を書く
+  // レスポンスを返す
+// }
 
 export async function GET() {
   let conn
