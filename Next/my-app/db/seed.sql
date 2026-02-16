@@ -6,3 +6,6 @@ INSERT INTO users (name) VALUES
 ('Charlie');
 
 <!--Get-Content db\schema.sql | mysql -u root -p
+
+SHOW TABLES;
+SELECT * FROM users;
