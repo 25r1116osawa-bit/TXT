@@ -1,6 +1,6 @@
 
 
-export  const PrimaryButton = () =>{
+export  const PrimaryButton2 = () =>{
 
   return (
     <>
@@ -9,4 +9,3 @@ export  const PrimaryButton = () =>{
   )
 }
 
-export default App
