@@ -1,8 +1,9 @@
 import BaseButton from "./BaseButton"; // {} は不要
 import styled from "styled-components";
 
-export const PrimaryButton = ({ children, ...rest }) => {
-  return <SButton {...rest}>{children}</SButton>;
+export const PrimaryButton = ({ children }) => {
+  
+  return <SButton >{children}</SButton>;
 };
 
 const SButton = styled(BaseButton)`

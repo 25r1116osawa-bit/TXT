@@ -1,0 +1,89 @@
+/* 全体 */
+body {
+  margin: 0;
+  padding: 16px;
+  width: 400px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #444;
+  background-color: #f7f9fa;
+}
+
+/* リスト */
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+/* 入力 */
+input {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #309da5;
+}
+
+/* ボタン */
+button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #309da5;
+  background-color: #309da5;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #26848b;
+}
+
+/* 入力エリア */
+.group {
+  background-color: #e6f3f4;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.inputStudyContents ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 登録確認エリア */
+.studyRecordsArea {
+  padding: 12px;
+  min-height: 150px;
+  border-radius: 8px;
+  margin-top: 12px;
+  border: 1px solid #309da5;
+  background-color: #fff;
+}
+
+.studyRecordsArea p {
+  margin-top: 8px;
+  color: #d9534f;
+  font-size: 13px;
+}
+
+/* 合計時間 */
+.totalStudyTime {
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 12px;
+  border: 1px solid #309da5;
+  background-color: #fff;
+  font-weight: bold;
+}
