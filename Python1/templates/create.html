@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>新規登録</h1>
+<form method="POST">
+    <label for="departmentid">部門ID</label> 
+    <input type="number" name="departmentid" id="departmentid"><br>
+
+    <label for="departmentName">部門名</label> 
+    <input type="text" name="departmentName" id="departmentName"><br>
+    <input type="submit" name="新規登録" value="登録">
+</form>
+<p>{{method}}</p>
+{{id}}
+{{name}}
+{% endblock %}

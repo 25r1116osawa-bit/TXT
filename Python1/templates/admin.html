@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for posts in posts %}
+<ul>
+    <li>{{ posts.title }}</li>
+    <li>{{ posts.body }}</li>
+    <li>{{ posts.created_at }}</li>
+</ul>
+{% endfor %}
+{% endblock %}
