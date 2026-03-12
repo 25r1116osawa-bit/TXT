@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>従業員情報の更新</h1>
+
+<form method="POST">
+
+<label for="userid">ID</label> 
+<input type="number" value="{{user.id}}" ><br>
+
+<label for="userName">名前</label> 
+<input type="text" name="userName" value="{{ user.name }}" id="userName">
+<br>
+
+<label for="userName">メールアドレス</label> 
+<input type="text" name="userName" value="{{ user.mail }}" id="userName">
+<br>
+
+<input type="submit" value="更新">
+
+</form>
+
+{% endblock %}

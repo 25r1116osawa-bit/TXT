@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for user in admin %}
+    <p>{{ user.name }} の勤怠:</p>
+    {% for att in user.attendances %}
+        出勤: {{ att.clock_in_datetime }} 退勤: {{ att.clock_out_datetime }}<br>
+    {% else %}
+        勤怠データなし<br>
+    {% endfor %}
+{% endfor %}
+
+{% for user in admin %}
+    <h3>{{ user.name }} の勤怠:</h3>
+    {% for att in user.attendances %}
+        出勤: {{ att.clock_in_datetime }} 退勤: {{ att.clock_out_datetime }}<br>
+        {% if att.breaks %}
+            休憩時間:
+            <ul>
+            {% for br in att.breaks %}
+                <li>{{ br.break_start_time }} - {{ br.break_end_time }}
+                    {% if br.break_duration %}
+                        ({{ br.break_duration }})
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            休憩データなし
+        {% endif %}
+        <hr>
+    {% else %}
+        勤怠データなし
+    {% endfor %}
+{% endfor %}
+
+<h1>管理者の画面</h1>
+<a href="/create" class="btn">新規登録</a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>メールアドレス</th>
+            <th>役割</th>
+            <th>操作</th> <!-- ここがアクション列 -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in admin %}
+        <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.mail }}</td>
+            <td>{{ user.role }}</td>
+            
+            <td>
+                <a href="/{{ user.id }}/update" class="btn">更新</a>
+                <a href="/{{ user.id }}/delete" class="btn btn-danger">削除</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<style>
+    .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 5px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    .btn:hover {
+        background-color: #2980b9;
+    }
+    .btn-danger {
+        background-color: #e74c3c;
+    }
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
+</style>
+
+{% endblock %}
