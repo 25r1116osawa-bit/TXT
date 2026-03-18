@@ -1,0 +1,62 @@
+① 商品追加
+→ POST /cart
+
+② カート取得
+→ GET /cart
+
+③ 数量変更
+→ PATCH /cart/:id
+
+④ 削除
+→ DELETE /cart/:id
+
+
+カートのイメージ
+① 商品追加
+→ POST /cart
+
+② カート取得
+→ GET /cart
+
+③ 数量変更
+→ PATCH /cart/:id
+
+④ 削除
+→ DELETE /cart/:id
+
+
+🅰️ パターン①（シンプル）
+
+👉 カート入れる前にログインさせる
+
+カート追加クリック
+→ 未ログイン
+→ ログイン画面へ
+→ 戻って追加
+👍 メリット
+
+実装が簡単
+
+DB管理しやすい
+
+👎 デメリット
+
+UXちょい悪い（めんどい）
+
+🅱️ パターン②（よくあるEC）
+
+👉 未ログインでもカートOK
+
+未ログイン → localStorage保存
+ログイン → DBにマージ
+
+① 未ログインで商品追加
+→ localStorageに保存
+
+② ログイン
+
+③ localStorageのカートを取得
+
+④ DBのカートに追加（merge）
+
+⑤ localStorage削除

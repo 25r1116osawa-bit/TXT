@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "プレミアムコーヒー豆",
+    "category": "飲料",
+    "price": 1500,
+    "stock": 10,
+    "isRecommended": true
+  },
+  {
+    "id": 2,
+    "name": "オーガニック紅茶",
+    "category": "飲料",
+    "price": 1200,
+    "stock": 5,
+    "isRecommended": false
+  },
+  {
+    "id": 3,
+    "name": "抹茶ラテパウダー",
+    "category": "飲料",
+    "price": 900,
+    "stock": 8,
+    "isRecommended": true
+  },
+  {
+    "id": 4,
+    "name": "ミネラルウォーター",
+    "category": "飲料",
+    "price": 200,
+    "stock": 30,
+    "isRecommended": false
+  },
+  {
+    "id": 5,
+    "name": "チョコレートクッキー",
+    "category": "食品",
+    "price": 500,
+    "stock": 15,
+    "isRecommended": true
+  },
+  {
+    "id": 6,
+    "name": "バタークロワッサン",
+    "category": "食品",
+    "price": 300,
+    "stock": 12,
+    "isRecommended": false
+  },
+  {
+    "id": 7,
+    "name": "ハンドドリップセット",
+    "category": "器具",
+    "price": 3500,
+    "stock": 3,
+    "isRecommended": true
+  },
+  {
+    "id": 8,
+    "name": "コーヒーミル",
+    "category": "器具",
+    "price": 4200,
+    "stock": 4,
+    "isRecommended": false
+  },
+  {
+    "id": 9,
+    "name": "エスプレッソカップ",
+    "category": "器具",
+    "price": 800,
+    "stock": 20,
+    "isRecommended": true
+  },
+  {
+    "id": 10,
+    "name": "カフェラテグラス",
+    "category": "器具",
+    "price": 1000,
+    "stock": 9,
+    "isRecommended": false
+  }
+]

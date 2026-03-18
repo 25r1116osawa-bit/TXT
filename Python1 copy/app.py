@@ -4,10 +4,13 @@ from flask import Flask, redirect, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, current_user, login_required, login_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask import jsonify
+from flask_cors import CORS
+
 
 db = SQLAlchemy()
 app = Flask(__name__)
-
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///kintai.db'
 
 # セッションキー
@@ -180,8 +183,25 @@ with app.app_context():
         db.session.add(br)
         db.session.commit()
 
+
+
+@app.route("/api/users")
+def api_users():
+    users = User.query.all()
+
+    result = []
+    for user in users:
+        result.append({
+            "id": user.id,
+            "name": user.name,
+            "mail": user.mail,
+            "role": user.role
+        })
+
+    return jsonify(result)
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5001)
 
 
 
