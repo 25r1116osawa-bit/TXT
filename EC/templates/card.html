@@ -1,0 +1,13 @@
+<div class="card">
+  <img src="https://picsum.photos/seed/{{item.id}}/400/200" alt="">
+  <div class="card-body">
+    <p class="name">{{item.name}}</p>
+    <p class="price">¥{{item.price}}</p>
+    {% if show_btn %}
+    <a href="{{ url_for('itemdetels', item_id=item.id) }}" class="btn">
+      カートへ
+    </a>
+    {% endif %}
+</a>
+  </div>
+</div>

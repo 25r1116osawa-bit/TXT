@@ -1,0 +1,36 @@
+<form method="POST" >
+  {{ form.hidden_tag() }}
+
+  <div>
+    {{ form.name.label }}<br>
+    {{ form.name() }}
+
+  </div>
+
+  <div>
+    {{ form.price.label }}<br>
+    {{ form.price() }}
+  </div>
+
+  <div>
+    {{ form.stock.label }}<br>
+    {{ form.stock() }}
+  </div>
+
+  <div>
+    {{ form.category.label }}<br>
+    {{ form.category() }}
+
+  </div>
+
+  <div>
+    {{ form.description.label }}<br>
+    {{ form.description() }}
+  </div>
+
+  <div>
+    {{ form.is_recommended() }} {{ form.is_recommended.label }}
+  </div>
+
+  <button type="submit">登録</button>
+</form>

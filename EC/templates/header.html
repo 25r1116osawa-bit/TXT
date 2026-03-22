@@ -1,0 +1,52 @@
+<header>
+    <div class="logo">
+        {% include "icons/store.svg" %}
+        <span>ECStore</span>
+    </div>
+    <div>
+        <ul>
+            <li>商品一覧</li>
+            <li>注文状況</li>
+            <li>カート</li>
+        </ul>
+    </div>
+</header>
+
+
+
+<style>
+    .icon {
+        width: 30px;
+        height: 30px;
+        color: #1DA070;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: space-between;
+        height: 64px;
+        width:1280px;
+        margin:0 auto;
+        padding:0 16px ;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .logo {
+    display: flex;
+    align-items: center;  /* ← これが重要 */
+    gap: 8px;
+    }
+</style>
